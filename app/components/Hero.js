@@ -1,23 +1,24 @@
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 
-
-
 const Hero = () => (
-  <div className="relative pt-24 pb-8">
+  <div className="relative pt-24 pb-5">
     <div className="absolute inset-0 z-0">
-      <Image
-        src="/7.jpg"
-        alt="배경 이미지"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-      />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/bg.mp4" type="video/mp4" />
+      </video>
       <div className="absolute inset-0 bg-black opacity-50"></div>
     </div>
     <div className="container mx-auto px-4 relative z-10">
       <div className="max-w-3xl mx-auto text-center md:text-left">
         <div className="flex items-center justify-center md:justify-start mb-6">
+          <Image src="/logo.png" alt="에듀핏 로고" width={60} height={60} className="mr-4" />
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
             모두를 위한 미래교육 플랫폼
           </h1>
@@ -34,11 +35,4 @@ const Hero = () => (
   </div>
 );
 
-
-
-
-
 export default Hero;
-
-
-
